@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import VotingImg from '../../public/voting-hand-india-election-vector-illustration_667085-68.webp'
 
-const ComponentName = () => {
+const Hero = () => {
     return (
         <div className="bg-gray-50">
             <header className="py-4 md:py-6">
@@ -50,4 +50,4 @@ const ComponentName = () => {
 
     )
 }
-export default ComponentName;
+export default Hero;

@@ -15,7 +15,9 @@ const Header = () => {
         <nav className="flex-wrap lg:flex bg-white shadow-2xl fixed w-full z-[99999] justify-between items-center w-[100%] m-auto py-4 px-10 rounded-b-[2rem]">
             <div className="flex items-center mb-10 lg:mb-0 w-1/4" >
                 <div className="text-3xl sm:text-3xl flex  font-bold text-gradient bg-gradient-to-r from-orange-500 to-green-300 bg-clip-text text-transparent">
+                    <Link href='/'>
                     e-VoteIndia
+                    </Link>
                 </div>
                 <button
                     className="md:hidden w-10 h-10 ml-auto flex items-center justify-center border-blue-500 text-blue-500 rounded-md"
@@ -25,7 +27,7 @@ const Header = () => {
                 </button>
             </div>
 
-            <div className={`lg:flex flex-col md:flex-row md:items-center text-center gap-8 md:space-x-6 ${!navbarOpen ? 'hidden' : 'flex'}`}>
+            <div className={`lg:flex flex-col md:flex-row md:items-center text-center gap-4 md:space-x-6 ${!navbarOpen ? 'hidden' : 'flex'}`}>
                 <button id="sign-in-button" className="w-15" prefetch="true">
                     <Link className='text-black font-medium' href="/login">Login</Link>
                 </button>
