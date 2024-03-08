@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const db = async () => {
     await mongoose.connect(process.env.MONGO_URI,
         {
-            dbName: "cryptoVote",
+            dbName: "eVoteIndia",
         }
     ).then(() => {
         console.log("database connected")
