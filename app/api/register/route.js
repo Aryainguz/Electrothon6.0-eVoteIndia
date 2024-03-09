@@ -6,7 +6,7 @@ import db from "../../../config/db.js";
 
 export async function POST(request) {
   await db();
-  const { phone,password,adhar_id,voter_id } = await request.json();
+  const { phone,password,adhar_id,voter_id,fname,lname } = await request.json();
 
   const hashedPass = await bcrypt.hash(password, 10);
     const token = Math.floor(10000 + Math.random() * 90000);
@@ -19,6 +19,8 @@ export async function POST(request) {
     adhar_id,
     voter_id,
     verification_token: token,
+    first_name: fname,
+    last_name: lname,
   });
 
 
