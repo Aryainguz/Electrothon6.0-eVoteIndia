@@ -7,22 +7,22 @@ const Faq = () => {
     const [faq, setFaq] = useState([
         {
             question: 'How to create an account?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            answer: 'Simply click on the register button and fill in your details. You will be required to provide a valid means of identification. Once your account is created, you can use it to perform voting',
             open: false
         },
         {
-            question: 'How to vote on CryptoVote?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            question: 'How to register Biometrics?',
+            answer:'You can register your biometrics online with correct details. You will be required to fill a form and provide your biometric data. You will also be required to provide a valid means of identification. Once your biometrics is registered, you can use it to perform voting',
             open: false
         },
         {
             question: 'Can I recover my password?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            answer: 'To recover your password call our support team on 0800-000-0000 or send an email to team for details on how to recover your password. You will be required to provide your email address and a valid means of identification.',
             open: false
         },
         {
             question: 'How can I reach to support?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            answer: 'You can reach our support team by calling 0800-000-0000 or sending an email to team. Our support team is available 24/7 to attend to your needs.',
             open: false
         }
     ]);
