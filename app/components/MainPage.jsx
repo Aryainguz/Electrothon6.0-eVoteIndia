@@ -18,7 +18,7 @@ function MainPage() {
   const [votingStatus, setVotingStatus] = useState(true);
   const [remainingTime, setremainingTime] = useState('');
   const [candidates, setCandidates] = useState([]);
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(null);
   const [CanVote, setCanVote] = useState(true);
   const [txnurl, setTxnurl] = useState('https://mumbai.polygonscan.com/tx/0x79dd91641ec3dcd160a862457c7eb72c4d1c5fdcd79bc5ff191b68323795396d');
 
@@ -253,7 +253,7 @@ function MainPage() {
                 </div>
 
                 <button className='p-2 mb-4 w-[60%] flex m-auto text-center items-center justify-center bg-blue-800 text-white font-semibold px-4 rounded-lg' onClick={() => { setNumber(0) }}>
-                  Vote
+                {number == 0 ?  "Selected" : "Vote" }
                 </button>
 
 
@@ -279,7 +279,7 @@ function MainPage() {
                 </div>
 
                 <button className='p-2 mb-4 w-[60%] flex m-auto text-center items-center justify-center bg-blue-800 text-white font-semibold px-4 rounded-lg' onClick={() => { setNumber(1) }}>
-                  Vote
+                  {number == 1 ?  "Selected" : "Vote" }
                 </button>
 
 
@@ -306,7 +306,7 @@ function MainPage() {
                 </div>
 
                 <button className='p-2 mb-4 w-[60%] flex m-auto text-center items-center justify-center bg-blue-800 text-white font-semibold px-4 rounded-lg' onClick={() => { setNumber(2) }}>
-                  Vote
+                {number == 2 ?  "Selected" : "Vote" }
                 </button>
 
 
@@ -333,7 +333,7 @@ function MainPage() {
                 </div>
 
                 <button className='p-2 mb-4 w-[60%] flex m-auto text-center items-center justify-center bg-blue-800 text-white font-semibold px-4 rounded-lg' onClick={() => { setNumber(3) }}>
-                  Vote
+                {number == 3 ?  "Selected" : "Vote" }
                 </button>
 
 
