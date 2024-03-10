@@ -5,13 +5,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm i
+then npm run dev
+```
+
+## Running AI Face Auth
+
+First, run the development server:
+
+```bash
+install requirements.txt
+then python manage createsuperuser 
+then python manage.py makemigrations
+then python manage.py migrate
+then python manage.py runserver
+- Create a profile at /admin to be able to login
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

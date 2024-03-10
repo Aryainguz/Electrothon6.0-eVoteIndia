@@ -18,7 +18,7 @@ function MainPage() {
   const [votingStatus, setVotingStatus] = useState(true);
   const [remainingTime, setremainingTime] = useState('');
   const [candidates, setCandidates] = useState([]);
-  const [number, setNumber] = useState(null);
+  const [number, setNumber] = useState(0);
   const [CanVote, setCanVote] = useState(true);
   const [txnurl, setTxnurl] = useState('https://mumbai.polygonscan.com/tx/0x79dd91641ec3dcd160a862457c7eb72c4d1c5fdcd79bc5ff191b68323795396d');
 
@@ -70,24 +70,19 @@ function MainPage() {
 
 
   async function vote() {
-    try{
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      //   await provider.send("eth_requestAccounts", []);
-      const signer = await provider.getSigner();
-      const contractInstance = new ethers.Contract(
-        Constants.contractAddress, Constants.contractAbi, signer
-      );
-  
-      const tx = await contractInstance.vote(number);
-      await tx.wait();
-      console.log(tx)
-      // setTxnurl(tx.transactionHash);
-      canVote();
-    }
-    catch(e){
-      toast.error(e)
-    }
-  
+    console.log("voting", number)
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    //   await provider.send("eth_requestAccounts", []);
+    const signer = await provider.getSigner();
+    const contractInstance = new ethers.Contract(
+      Constants.contractAddress, Constants.contractAbi, signer
+    );
+
+    const tx = await contractInstance.vote(number);
+    await tx.wait();
+    console.log(tx)
+    // setTxnurl(tx.transactionHash);
+    canVote();
   }
 
 

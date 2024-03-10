@@ -3,11 +3,9 @@ import mongoose from "mongoose";
 const userSchema = mongoose.Schema({
     first_name: {
         type: String,
-        required:[true,"Please enter your first name!"]
     },
     last_name: {
         type: String,
-        required:[true,"Please enter your last name!"]
     },
     phone: {
         type: Number,
